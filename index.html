@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Hospital Management System | HealthGrid</title>
+
+    <!-- Tailwind CSS via CDN (optional but nice) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              primary: '#2563EB',
+              secondary: '#1E293B',
+              charcoal: '#1F2937',
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google font -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="bg-slate-50 text-charcoal">
+    <!-- Top navbar -->
+    <header
+      class="fixed top-0 left-0 right-0 z-20 bg-white/90 backdrop-blur border-b border-slate-200"
+    >
+      <nav
+        class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3"
+      >
+        <a href="#/" class="flex items-center gap-2">
+          <span
+            class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white font-bold text-lg"
+            >H</span
+          >
+          <span class="font-semibold text-lg text-secondary"
+            >HealthGrid</span
+          >
+        </a>
+
+        <div class="hidden sm:flex gap-4 text-sm font-medium">
+          <a href="#/" class="hover:text-primary">Home</a>
+          <a href="#/features" class="hover:text-primary">Features</a>
+          <a href="#/pricing" class="hover:text-primary">Pricing</a>
+          <a href="#/about" class="hover:text-primary">About</a>
+        </div>
+
+        <div class="flex gap-2 text-sm font-medium">
+          <a
+            href="#/login"
+            class="px-3 py-1.5 rounded-full border border-slate-300 hover:bg-slate-100"
+            >Login</a
+          >
+          <a
+            href="#/register"
+            class="px-3 py-1.5 rounded-full bg-primary text-white hover:bg-blue-700"
+            >Register</a
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="pt-20 min-h-screen">
+      <div id="app" class="max-w-6xl mx-auto px-4 py-10"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-6 mt-8 bg-white/70">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-sm text-slate-500"
+      >
+        <span>© 2025 Hospital Management System (HealthGrid)</span>
+        <span>Built for hospitals, clinics & healthcare teams.</span>
+      </div>
+    </footer>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
